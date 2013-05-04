@@ -1,23 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ปรับอัตราแลกเปลี่ยน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-RM-8vq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ค่าเงินดอลล่าร์" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-a1-aEm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="อัตราแลกเปลี่ยน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLt-LO-VM1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ผลการแปลงค่าเงิน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJo-Ul-xsL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BRv-Ag-cUL">
+                                <connections>
+                                    <action selector="mySliderExChange:" destination="2" eventType="valueChanged" id="P6Z-LY-xFA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8b-5J-zFZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-YD-hL1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="แปลงค่าเงิน">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myButton:" destination="2" eventType="touchUpInside" id="hcR-2j-U2W"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rc-Lr-jCZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="บาท" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-wx-Tqt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-PJ-kt8">
+                                <connections>
+                                    <action selector="mySwitching:" destination="2" eventType="valueChanged" id="hz1-ez-Of7"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-N4-kRc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="wbG-h0-Ex1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g2c-YD-hL1" firstAttribute="trailing" secondItem="1Rc-Lr-jCZ" secondAttribute="trailing" type="default" id="0sp-xu-Iki"/>
+                            <constraint firstItem="tj4-N4-kRc" firstAttribute="centerX" secondItem="o6o-PJ-kt8" secondAttribute="centerX" type="default" id="2At-4R-LsU"/>
+                            <constraint firstItem="m4d-a1-aEm" firstAttribute="leading" secondItem="gcK-RM-8vq" secondAttribute="leading" type="default" id="3JF-K9-bP1"/>
+                            <constraint firstItem="g2c-YD-hL1" firstAttribute="trailing" secondItem="D8b-5J-zFZ" secondAttribute="trailing" type="default" id="5Ow-sW-Wgh"/>
+                            <constraint firstItem="1Rc-Lr-jCZ" firstAttribute="baseline" secondItem="qJo-Ul-xsL" secondAttribute="baseline" type="default" id="9hZ-Zk-hS7"/>
+                            <constraint firstItem="qJo-Ul-xsL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="35" id="AXb-8Z-HA4"/>
+                            <constraint firstItem="rLt-LO-VM1" firstAttribute="leading" secondItem="m4d-a1-aEm" secondAttribute="leading" type="default" id="Bb1-sV-2xk"/>
+                            <constraint firstItem="BRv-Ag-cUL" firstAttribute="trailing" secondItem="D8b-5J-zFZ" secondAttribute="trailing" type="default" id="EU0-Uw-Mna"/>
+                            <constraint firstAttribute="trailing" secondItem="tj4-N4-kRc" secondAttribute="trailing" constant="43" id="JQH-Wc-3gn"/>
+                            <constraint firstItem="o6o-PJ-kt8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="34" id="M0A-If-Csv"/>
+                            <constraint firstItem="m4d-a1-aEm" firstAttribute="baseline" secondItem="tj4-N4-kRc" secondAttribute="baseline" type="default" id="NGe-5l-fOK"/>
+                            <constraint firstItem="g2c-YD-hL1" firstAttribute="leading" secondItem="D8b-5J-zFZ" secondAttribute="leading" type="default" id="Naz-Is-qeG"/>
+                            <constraint firstAttribute="trailing" secondItem="sgQ-wx-Tqt" secondAttribute="trailing" constant="36" id="NcE-fY-kJu"/>
+                            <constraint firstItem="g2c-YD-hL1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="195" id="Qsl-Cs-7eL"/>
+                            <constraint firstItem="o6o-PJ-kt8" firstAttribute="bottom" secondItem="gcK-RM-8vq" secondAttribute="bottom" type="default" id="S3A-Ta-CIz"/>
+                            <constraint firstItem="sgQ-wx-Tqt" firstAttribute="baseline" secondItem="1Rc-Lr-jCZ" secondAttribute="baseline" type="default" id="WMm-xJ-zMN"/>
+                            <constraint firstItem="qJo-Ul-xsL" firstAttribute="centerX" secondItem="rLt-LO-VM1" secondAttribute="centerX" type="default" id="eQZ-kM-sWr"/>
+                            <constraint firstItem="BRv-Ag-cUL" firstAttribute="bottom" secondItem="rLt-LO-VM1" secondAttribute="bottom" type="default" id="fS5-hT-09K"/>
+                            <constraint firstItem="BRv-Ag-cUL" firstAttribute="leading" secondItem="D8b-5J-zFZ" secondAttribute="leading" type="default" id="jL6-Bb-FLz"/>
+                            <constraint firstItem="tj4-N4-kRc" firstAttribute="leading" secondItem="BRv-Ag-cUL" secondAttribute="leading" type="default" id="l60-v6-TZQ"/>
+                            <constraint firstItem="tj4-N4-kRc" firstAttribute="trailing" secondItem="BRv-Ag-cUL" secondAttribute="trailing" type="default" id="qMh-qx-3Ie"/>
+                            <constraint firstItem="g2c-YD-hL1" firstAttribute="leading" secondItem="1Rc-Lr-jCZ" secondAttribute="leading" type="default" id="u3f-QP-W5J"/>
+                            <constraint firstItem="D8b-5J-zFZ" firstAttribute="top" secondItem="BRv-Ag-cUL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vHW-BR-l88"/>
+                            <constraint firstItem="BRv-Ag-cUL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="126" id="vfj-D9-EzU"/>
+                            <constraint firstItem="tj4-N4-kRc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="83" id="w95-vS-gsn"/>
+                            <constraint firstAttribute="bottom" secondItem="qJo-Ul-xsL" secondAttribute="bottom" constant="165" id="zk7-GT-Y8a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myInput1" destination="tj4-N4-kRc" id="wLz-f0-vYh"/>
+                        <outlet property="myOutput" destination="1Rc-Lr-jCZ" id="KMa-lf-G8k"/>
+                        <outlet property="myRate" destination="D8b-5J-zFZ" id="LSq-ZH-0Vx"/>
+                        <outlet property="mySlider" destination="BRv-Ag-cUL" id="4nS-zC-kWj"/>
+                        <outlet property="mySwitching" destination="o6o-PJ-kt8" id="bls-VE-HHU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myButton:"/>
+                <relationship kind="action" name="mySliderExChange:"/>
+                <relationship kind="action" name="mySwitching:"/>
+                <relationship kind="outlet" name="myInput1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myOutput" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myRate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="mySwitching" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
